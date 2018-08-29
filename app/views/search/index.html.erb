@@ -10,7 +10,7 @@
     </thead>
 
     <tbody>
-      <% @stations.each do |station| %>
+      <% @stations_presenter.stations.each do |station| %>
       <tr class="station">
         <td><%= station.name %></td>
         <td class="station-address"><%= station.address %></td>

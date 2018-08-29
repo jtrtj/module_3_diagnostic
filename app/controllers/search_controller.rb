@@ -1,5 +1,6 @@
 class SearchController < ApplicationController
   def index
+    @stations_presenter = StationsPresenter.new(params[:q])
     zip_code = params[:q]
     api_key = ENV['enrel_api_key']
     conn = Faraday.new(:url => "https://developer.nrel.gov/api/alt-fuel-stations/v1/") do |faraday|
