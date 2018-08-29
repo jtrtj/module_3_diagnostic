@@ -8,6 +8,7 @@ feature "User can visit root page" do
     fill_in :q,	with: "#{visitor_zip}" 
     click_button 'Locate'
 
+    expect(current_path).to eq('/search')
     expect(page).to have_content("Stations within 6 miles:")
     expect(page).to have_css(".station", count: 10)
     expect(page).to have_css(".station-address", count: 10)
