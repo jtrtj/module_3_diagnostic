@@ -4,7 +4,7 @@ class StationsPresenter
   end
 
   def stations
-    @stations = nrel_response[:fuel_stations].map do |station|
+    @stations = nrel_response.map do |station|
       FuelStation.new(station)
     end
   end
