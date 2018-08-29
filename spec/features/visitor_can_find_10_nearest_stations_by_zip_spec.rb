@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 feature "User can visit root page" do
-  scenario "and search with their zip code to see a list of the 10 nearest staitons" do
+  scenario "and search with their zip code to see a list of the 10 nearest staitons", :vcr do
     visitor_zip = 80203
 
     visit '/'
