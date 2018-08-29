@@ -11,5 +11,6 @@ class SearchController < ApplicationController
     @stations = response[:fuel_stations].map do |station|
                   FuelStation.new(station)
                 end
+
   end
 end

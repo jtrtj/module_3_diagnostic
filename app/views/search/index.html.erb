@@ -11,8 +11,8 @@
 
     <tbody>
       <% @stations.each do |station| %>
-      <tr>
-        <td class="station"><%= station.name %></td>
+      <tr class="station">
+        <td><%= station.name %></td>
         <td class="station-address"><%= station.address %></td>
         <td class="station-fuel-types"><%= station.fuel_types %></td>
         <td class="station-distance"><%= station.distance %></td>
